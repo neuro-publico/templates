@@ -1,0 +1,760 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Template landing page</title>
+  <link rel="stylesheet" href="./styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/html2canvas@1.4.1/dist/html2canvas.min.js"></script>
+
+</head>
+
+<body>
+<div id="capture">
+  <!-- Banner -->
+  <div class="promo-banner">
+    <span class="promo-banner__text">⏰ ¡ÚLTIMAS UNIDADES!</span>
+    <button class="promo-banner__close" aria-label="Cerrar banner">×</button>
+  </div>
+
+  <header class="header">
+    <div class="container">
+      <h1 class="logo">LOGO</h1>
+    </div>
+  </header>
+
+  <main class="main-content">
+    <div class="container-hero">
+      <!-- HERO: Carrusel 4:3 -->
+      <section class="hero-section">
+         <!-- Hero con galería -->
+    <div class="container hero-section">
+        <div class="product-grid">
+          <!-- Galería de imágenes -->
+          <div class="gallery">
+            <div class="main-image">
+                <!-- Estas imagenes son de solo producto -->
+              <img id="mainImage" src="https://images.unsplash.com/photo-1620916566398-39f1143ab7be?auto=format&fit=crop&q=80" alt="Producto principal">
+            </div>
+            <div class="thumbnails">
+              <button class="thumbnail active" data-image="https://images.unsplash.com/photo-1620916566398-39f1143ab7be?auto=format&fit=crop&q=80">
+                <img src="https://images.unsplash.com/photo-1620916566398-39f1143ab7be?auto=format&fit=crop&q=80" alt="Miniatura 1">
+              </button>
+              <button class="thumbnail" data-image="https://images.unsplash.com/photo-1535585209827-a15fcdbc4c2d?auto=format&fit=crop&q=80">
+                <img src="https://images.unsplash.com/photo-1535585209827-a15fcdbc4c2d?auto=format&fit=crop&q=80" alt="Miniatura 2">
+              </button>
+              <button class="thumbnail" data-image="https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?auto=format&fit=crop&q=80">
+                <img src="https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?auto=format&fit=crop&q=80" alt="Miniatura 3">
+              </button>
+              <button class="thumbnail" data-image="https://images.unsplash.com/photo-1527799820374-dcf8d9d4a388?auto=format&fit=crop&q=80">
+                <img src="https://images.unsplash.com/photo-1527799820374-dcf8d9d4a388?auto=format&fit=crop&q=80" alt="Miniatura 4">
+              </button>
+            </div>
+          </div>
+  
+        </div>
+
+        <div class="product-image">
+          <img
+            src="https://images.unsplash.com/photo-1608248597279-f99d160bfcbc?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80"
+            alt="Shampoo de Argán"
+            class="product-image__img"
+          />
+        </div>
+<!-- Los campos de esta sección se llamaran del onboarding -->
+        <div class="product-info">
+          <h2 class="product-title">{Product}</h2>
+          <div class="rating-container">
+            <div class="stars">★★★★★</div>
+            <span class="reviews-text">{Product_rating}</span>
+          </div>
+          <div class="price-container">
+            <p class="price-old">{Price}</p>
+            <p class="price-current">{Sale}</p>
+            <p class="price-tag">{Payment_method}</p>
+          </div>
+          <a href="#checkout" class="cta-button hero-cta">COMPRAR AHORA</a>
+
+
+          <section class="content-section content-section--tight">
+            <p class="content-section__text">
+              {Product_description}
+            </p>
+          </section>
+
+          <section class="content-section content-section--tight ingredients-section">
+            <h3 class="content-section__title">CARACTERÍSTICAS:</h3>
+          </br>
+            <ul class="ingredients-list">
+              <li>
+                <span class="check-icon">✓</span>
+                <span>{Features_list}</span>
+              </li>
+              <li>
+                <span class="check-icon">✓</span>
+                <span>{Features_list}</span>
+              </li>
+              <li>
+                <span class="check-icon">✓</span>
+                <span>{Features_list}</span>
+              </li>
+              <li>
+                <span class="check-icon">✓</span>
+                <span>{Features_list}</span>
+              </li>
+              <li>
+                <span class="check-icon">✓</span>
+                <span>{Features_list}</span>
+              </li>
+              <li>
+                <span class="check-icon">✓</span>
+                <span>{Features_list}</span>
+              </li>
+          </section>
+        </div>
+      </section>
+    </div>
+<!-- Los campos de esta sección se llamaran del onboarding -->
+    <section class="payment-security-section-wide-2">
+      <div class="payment-security-section__wrapper">
+        <div class="payment-security-icon">🔒</div>
+        <p class="payment-security-text">Tendras {#} días de garantía, compra sin preocupaciones</p>
+      </div>
+    </section>
+
+
+    <div class="container">
+      <!-- BENEFICIOS -->
+      <section class="benefits-section">
+        <div class="benefits-grid">
+          <div class="benefit-card">
+            <h4 class="benefit-card__title">{Benefits_title}</h4>
+            <!-- Esta imagen es de un beneficio -->
+            <div class="benefit-card__image">
+              <img
+                src="https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80"
+                alt="Benefits_img"
+              />
+            </div>
+            <p class="benefit-card__text">
+              {Benefits_description}
+            </p>
+          </div>
+
+          <div class="benefit-card">
+            <h4 class="benefit-card__title">{Benefits_title}</h4> 
+             <!-- Esta imagen es de un beneficio -->
+            <div class="benefit-card__image">
+              <img
+                src="https://images.unsplash.com/photo-1519699047748-de8e457a634e?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80"
+                alt="Benefits_img"
+              />
+            </div>
+            <p class="benefit-card__text">
+              {Benefits_description}
+            </p>
+          </div>
+
+          <div class="benefit-card">
+            <h4 class="benefit-card__title">{Benefits_title}</h4>
+            <!-- Esta imagen es de un beneficio -->
+            <div class="benefit-card__image">
+              <img
+                src="https://images.unsplash.com/photo-1515377905703-c4788e51af15?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80"
+                alt="Benefits_img"
+              />
+            </div>
+            <p class="benefit-card__text">
+              {Benefits_description}
+            </p>
+          </div>
+
+          <div class="benefit-card">
+            <h4 class="benefit-card__title">{Benefits_title}</h4>
+            <!-- Esta imagen es de un beneficio -->
+            <div class="benefit-card__image">
+              <img
+                src="https://images.unsplash.com/photo-1519415510236-718bdfcd89c8?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80"
+                alt="Benefits_img"
+              />
+            </div>
+            <p class="benefit-card__text">
+              {Benefits_description}
+            </p>
+          </div>
+
+          <div class="benefit-card">
+            <h4 class="benefit-card__title">{Benefits_title}</h4>
+            <!-- Esta imagen es de un beneficio -->
+            <div class="benefit-card__image">
+              <img
+                src="https://images.unsplash.com/photo-1522337660859-02fbefca4702?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80"
+                alt="Benefits_img"
+              />
+            </div>
+            <p class="benefit-card__text">
+              {Benefits_description}
+            </p>
+          </div>
+
+          <div class="benefit-card">
+            <h4 class="benefit-card__title">{Benefits_title}</h4>
+            <!-- Esta imagen es de un beneficio -->
+            <div class="benefit-card__image">
+              <img
+                src="https://images.unsplash.com/photo-1519415943484-9fa1873496d4?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80"
+                alt="Benefits_img"
+              />
+            </div>
+            <p class="benefit-card__text">
+              {Benefits_description}
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Dolor... -->
+      <section class="pain-points-section">
+        <div class="pain-point-content">
+          <div class="pain-point-text">
+            <h3 class="pain-point-text__title">{Pain_points_title}</h3>
+          </div>
+          <div class="pain-point-image">
+            <!-- Esta imagen es de un punto de dolor del usuario final --> 
+            <img
+              src="https://images.unsplash.com/photo-1519415510236-718bdfcd89c8?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80"
+              alt="Cabello dañado"
+            />
+          </div>
+          <div class="pain-point-text">
+            <p>
+              {Pain_points_description}
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Casos de uso -->
+      <section class="use-cases-section">
+        <div class="use-case-content">
+          <div class="use-case-image">
+            <!-- Esta imagen representa un caso de uso del producto/servicio --> 
+            <img
+              src="https://images.unsplash.com/photo-1519415510236-718bdfcd89c8?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80"
+              alt="Caso de uso"
+            />
+          </div>
+          <div class="use-case-text">
+            <h3 class="use-case-text__title">{Use_cases_title}</h3>
+            <div class="use-case-check">
+              <span class="check-icon">✓</span>
+              <p>{Use_cases_item}</p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+
+      <!-- PDF gratis 
+      <section class="free-pdf-section">
+        <div class="pdf-content">
+        <div class="frame">
+          <div class="book">
+            <div class="title">
+              <div class="big" style="word-break: break-word; white-space: pre-wrap; overflow-wrap: break-word; line-height: 1.2;">{Gift_Book_title}</div>
+              <div class="small">eBook Gratis</div>
+            </div>
+          </div>
+        </div>
+          <div class="pdf-text">
+            <span class="pdf-badge">¡GRATIS CON TU COMPRA!</span>
+            <h3 class="pdf-title">
+              {Gift_title}
+            </h3>
+            <p class="pdf-description">
+              {Gift_description}
+            </p>
+          </div>
+        </div>
+      </section>
+      </div> -->
+
+
+<!-- Los campos de esta sección se llamaran del onboarding -->
+      <section class="payment-security-section-wide">
+        <div class="payment-security-section__wrapper">
+          <div class="payment-security-icon">💳</div>
+          <p class="payment-security-text">{Payment_method}, fácil y seguro</p>
+        </div>
+      </section>
+
+
+
+      <div class="container">
+      <!-- Testimonios -->
+      <section class="content-section reviews-section">
+        <div class="reviews-title-box">
+          <h3 class="content-section__title">Testimonios</h3>
+        </div>
+        <div class="review-grid">
+          <!-- 6 testimonios de ejemplo -->
+          <div class="review-card">
+            <div class="review-image">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="review-icon">
+                    <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 3c1.66 0 3 1.34 3 3s-1.34 3-3 3-3-1.34-3-3 1.34-3 3-3zm0 14.2c-2.5 0-4.71-1.28-6-3.22.03-1.99 4-3.08 6-3.08 1.99 0 5.97 1.09 6 3.08-1.29 1.94-3.5 3.22-6 3.22z"/>
+                </svg>
+            </div>
+            <div class="review-header">
+              <h4 class="review-name">{Testimonials_name}</h4>
+            </div>
+            <p class="review-text">
+              {Testimonials_description}
+            </p>
+            <div class="review-footer">
+              <div class="review-verified">
+                <span>✓</span>
+                <span>Compra verificada</span>
+              </div>
+              <div class="review-stars">★★★★★</div>
+            </div>
+          </div>
+
+          <div class="review-card">
+            <div class="review-image">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="review-icon">
+                    <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 3c1.66 0 3 1.34 3 3s-1.34 3-3 3-3-1.34-3-3 1.34-3 3-3zm0 14.2c-2.5 0-4.71-1.28-6-3.22.03-1.99 4-3.08 6-3.08 1.99 0 5.97 1.09 6 3.08-1.29 1.94-3.5 3.22-6 3.22z"/>
+                </svg>
+            </div>
+            <div class="review-header">
+              <h4 class="review-name">{Testimonials_name}</h4>
+            </div>
+            <p class="review-text">
+              {Testimonials_description}
+            </p>
+            <div class="review-footer">
+              <div class="review-verified">
+                <span>✓</span>
+                <span>Compra verificada</span>
+              </div>
+              <div class="review-stars">★★★★★</div>
+            </div>
+          </div>
+
+          <div class="review-card">
+            <div class="review-image">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="review-icon">
+                    <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 3c1.66 0 3 1.34 3 3s-1.34 3-3 3-3-1.34-3-3 1.34-3 3-3zm0 14.2c-2.5 0-4.71-1.28-6-3.22.03-1.99 4-3.08 6-3.08 1.99 0 5.97 1.09 6 3.08-1.29 1.94-3.5 3.22-6 3.22z"/>
+                </svg>
+            </div>
+            <div class="review-header">
+              <h4 class="review-name">{Testimonials_name}</h4>
+            </div>
+            <p class="review-text">
+              {Testimonials_description}
+            </p>
+            <div class="review-footer">
+              <div class="review-verified">
+                <span>✓</span>
+                <span>Compra verificada</span>
+              </div>
+              <div class="review-stars">★★★★★</div>
+            </div>
+          </div>
+
+          <div class="review-card">
+            <div class="review-image">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="review-icon">
+                    <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 3c1.66 0 3 1.34 3 3s-1.34 3-3 3-3-1.34-3-3 1.34-3 3-3zm0 14.2c-2.5 0-4.71-1.28-6-3.22.03-1.99 4-3.08 6-3.08 1.99 0 5.97 1.09 6 3.08-1.29 1.94-3.5 3.22-6 3.22z"/>
+                </svg>
+            </div>
+            <div class="review-header">
+              <h4 class="review-name">{Testimonials_name}</h4>
+            </div>
+            <p class="review-text">
+              {Testimonials_description}
+            </p>
+            <div class="review-footer">
+              <div class="review-verified">
+                <span>✓</span>
+                <span>Compra verificada</span>
+              </div>
+              <div class="review-stars">★★★★☆</div>
+            </div>
+          </div>
+
+          <div class="review-card">
+            <div class="review-image">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="review-icon">
+                    <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 3c1.66 0 3 1.34 3 3s-1.34 3-3 3-3-1.34-3-3 1.34-3 3-3zm0 14.2c-2.5 0-4.71-1.28-6-3.22.03-1.99 4-3.08 6-3.08 1.99 0 5.97 1.09 6 3.08-1.29 1.94-3.5 3.22-6 3.22z"/>
+                </svg>
+            </div>
+            <div class="review-header">
+              <h4 class="review-name">{Testimonials_name}</h4>
+            </div>
+            <p class="review-text">
+              {Testimonials_description}
+            </p>
+            <div class="review-footer">
+              <div class="review-verified">
+                <span>✓</span>
+                <span>Compra verificada</span>
+              </div>
+              <div class="review-stars">★★★★☆</div>
+            </div>
+          </div>
+
+          <div class="review-card">
+            <div class="review-image">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="review-icon">
+                    <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 3c1.66 0 3 1.34 3 3s-1.34 3-3 3-3-1.34-3-3 1.34-3 3-3zm0 14.2c-2.5 0-4.71-1.28-6-3.22.03-1.99 4-3.08 6-3.08 1.99 0 5.97 1.09 6 3.08-1.29 1.94-3.5 3.22-6 3.22z"/>
+                </svg>
+            </div>
+            <div class="review-header">
+              <h4 class="review-name">{Testimonials_name}</h4>
+            </div>
+            <p class="review-text">
+              {Testimonials_description}
+            </p>
+            <div class="review-footer">
+              <div class="review-verified">
+                <span>✓</span>
+                <span>Compra verificada</span>
+              </div>
+              <div class="review-stars">★★★★★</div>
+            </div>
+          </div>
+        </div>
+      </section>
+      
+
+      
+
+      <!-- Sección de Preguntas Frecuentes (FAQ) -->
+      <section class="faq-section">
+        <div class="faq-title-box">
+          <h3>Preguntas Frecuentes</h3>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question">
+            {FAQs_question} 
+            <span class="faq-toggle">+</span>
+          </button>
+          <div class="faq-answer">
+            <p>{FAQs_answer}</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question">
+            {FAQs_question}
+            <span class="faq-toggle">+</span>
+          </button>
+          <div class="faq-answer">
+            <p>{FAQs_answer}</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question">
+            {FAQs_question}
+            <span class="faq-toggle">+</span>
+          </button>
+          <div class="faq-answer">
+            <p>{FAQs_answer}</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Checkout -->
+      <section id="checkout" class="checkout-section">
+        <h3 class="checkout-section__title">¡{Checkout_title}!</h3>
+        <div class="product-summary">
+          <h4 class="summary-title">Resumen de tu compra:</h4>
+          <div class="product-summary__content">
+          <!-- Esta imagene es del producto -->
+            <img
+              src="https://images.unsplash.com/photo-1535585209827-a15fcdbc4c2d?auto=format&fit=crop&q=80"
+              alt="Shampoo de Argán"
+              class="product-summary__image"
+            />
+            <!-- Los campos de esta sección se llamaran del onboarding -->
+            <div class="product-summary__info">
+              <h5>{Product}</h5>
+              <ul class="product-summary__list">
+                <!-- <li>{Gift_title}</li> -->
+                <li>{#} días de garantía</li>
+                <li>Envío gratis a todo el país</li>
+              </ul>
+
+            </div>
+          </div>
+        </div>
+
+        <div class="quantity-selector">
+          <span class="quantity-label">Cantidad:</span>
+          <div class="quantity-controls">
+            <button class="quantity-button js-quantity-minus">-</button>
+            <span class="quantity-display js-quantity-value">1</span>
+            <button class="quantity-button js-quantity-plus">+</button>
+          </div>
+        </div>
+
+        <!-- Bump Offer -->
+        <div class="bump-offer">
+          <div class="bump-content">
+            <!-- Agregamos el tag de oferta única -->
+            <div class="bump-tag">¡OFERTA ÚNICA!</div>
+            <div class="bump-header">
+              <img
+                src="https://picsum.photos/200?grayscale"
+                alt="Kit de cuidado"
+                class="bump-image"
+              />
+              <div class="bump-info">
+              <h6>{Bump_offer_product}</h6>
+              <p>{Bump_offer_description}</p>
+              </div>
+            </div>
+              <p class="bump-price">Llévalo por: {Bump_offer_price}</p>
+              <!-- Texto + toggle debajo del precio -->
+              <div class="bump-bottom-row">
+                <h5 class="bump-add-title">Agregar a mi orden</h5>
+                <div class="bump-toggle js-bump-toggle"></div>
+            </div>
+          </div>
+        </div>
+
+        <form class="order-form js-order-form">
+          <div class="form-group">
+            <label for="nombre" class="form-label">Nombre completo</label>
+            <input type="text" id="nombre" class="form-input" placeholder="Tu nombre" />
+          </div>
+          <div class="form-group">
+            <label for="email" class="form-label">Correo electrónico</label>
+            <input type="email" id="email" class="form-input" placeholder="tu@email.com" />
+          </div>
+          <div class="form-group">
+            <label for="telefono" class="form-label">Teléfono</label>
+            <input type="tel" id="telefono" class="form-input" placeholder="Tu teléfono" />
+          </div>
+          <div class="form-group">
+            <label for="direccion" class="form-label">Dirección de envío</label>
+            <input type="text" id="direccion" class="form-input" placeholder="Tu dirección" />
+          </div>
+          <div class="form-group">
+            <label for="metodo-pago" class="form-label">Método de pago</label>
+            <select id="metodo-pago" class="form-input">
+              <option value="" disabled selected>Selecciona un método de pago</option>
+              <option value="contra-entrega">Pago contra entrega</option>
+              <option value="en-linea">Pago en línea</option>
+            </select>
+          </div>
+        </form>
+      </section>
+    </div>
+    </div>
+
+  </main>
+
+  <!-- Barra fija inferior -->
+  <!-- Los campos de esta sección se llamaran del onboarding -->
+  <div class="bottom-bar js-bottom-bar">
+    <div class="bottom-bar__content container">
+      <div class="bottom-bar__top">
+        <div class="bottom-bar__price">
+          <p class="price-old-fixed">{Price}</p>
+          <p class="price-current-fixed">{Sale}</p>
+        </div>
+        <div class="shipping-info">
+          <div class="info-tag">Envío gratis</div>
+          <div class="info-tag">{Payment_method}</div>
+        </div>
+      </div>
+      <div class="bottom-bar__bottom">
+        <a href="Upsell.html" class="cta-button bottom-bar__cta">COMPRAR AHORA</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<script>
+/* 2) Carrusel arreglado */
+document.addEventListener('DOMContentLoaded', () => {
+  const wrapper = document.querySelector('.js-hero-carousel-wrapper');
+  const slides = document.querySelectorAll('.hero-carousel__slide');
+  const arrowLeft = document.querySelector('.hero-carousel .left');
+  const arrowRight = document.querySelector('.hero-carousel .right');
+  let currentIndex = 0;
+  const totalSlides = slides.length;
+
+  function moveSlide(direction){
+    // Ajustamos el índice sin pasarnos
+    currentIndex = (currentIndex + direction + totalSlides) % totalSlides;
+    wrapper.style.transform = `translateX(${-100 * currentIndex}%)`;
+  }
+
+  if(arrowLeft && arrowRight && wrapper && slides){
+    arrowLeft.addEventListener('click', () => moveSlide(-1));
+    arrowRight.addEventListener('click', () => moveSlide(1));
+  }
+});
+</script>
+
+<script>
+// Captura con html2canvas
+document.addEventListener('DOMContentLoaded', () => {
+  const btn = document.getElementById('btnCapturar');
+  const outputDiv = document.getElementById('canvasOutput');
+  if(btn && outputDiv){
+    btn.addEventListener('click', () => {
+      const captureElement = document.getElementById('capture');
+      if(!captureElement){
+        console.error('No se encontró #capture');
+        return;
+      }
+      html2canvas(captureElement)
+        .then(canvas => {
+          outputDiv.innerHTML = '';
+          outputDiv.appendChild(canvas);
+        })
+        .catch(err => {
+          console.error('Error al capturar:', err);
+        });
+    });
+  }
+});
+</script>
+
+<script>
+// Mostrar/ocultar barra fija inferior al hacer scroll
+document.addEventListener('DOMContentLoaded', () => {
+  const bottomBar = document.querySelector('.js-bottom-bar');
+  const firstViewportHeight = window.innerHeight;
+  let lastScrollY = window.scrollY;
+  let ticking = false;
+
+  window.addEventListener('scroll', () => {
+    lastScrollY = window.scrollY;
+    if(!ticking){
+      window.requestAnimationFrame(() => {
+        if(bottomBar){
+          if(lastScrollY > firstViewportHeight){
+            bottomBar.style.display = 'block';
+            bottomBar.offsetHeight; // Forzar reflow
+            bottomBar.classList.add('visible');
+          } else {
+            bottomBar.classList.remove('visible');
+            setTimeout(() => {
+              if(!bottomBar.classList.contains('visible')){
+                bottomBar.style.display = 'none';
+              }
+            },400);
+          }
+        }
+        ticking = false;
+      });
+      ticking = true;
+    }
+  });
+
+  // Cerrar banner
+  const promoCloseBtn = document.querySelector('.promo-banner__close');
+  if(promoCloseBtn){
+    promoCloseBtn.addEventListener('click', () => {
+      const promoBanner = document.querySelector('.promo-banner');
+      if(promoBanner){
+        promoBanner.style.display = 'none';
+      }
+    });
+  }
+
+  // Smooth scroll para anclas
+  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', e => {
+      e.preventDefault();
+      const target = document.querySelector(anchor.getAttribute('href'));
+      if(target){
+        target.scrollIntoView({behavior:'smooth'});
+      }
+    });
+  });
+
+  // Toggle Bump Offer
+  const bumpToggle = document.querySelector('.js-bump-toggle');
+  if(bumpToggle){
+    bumpToggle.addEventListener('click', () => {
+      bumpToggle.classList.toggle('active');
+    });
+  }
+
+  // Control de cantidad
+  const minusBtn = document.querySelector('.js-quantity-minus');
+  const plusBtn = document.querySelector('.js-quantity-plus');
+  const quantityDisplay = document.querySelector('.js-quantity-value');
+  if(minusBtn && plusBtn && quantityDisplay){
+    minusBtn.addEventListener('click', () => {
+      let qty = parseInt(quantityDisplay.textContent,10);
+      if(qty>1) quantityDisplay.textContent = qty-1;
+    });
+    plusBtn.addEventListener('click', () => {
+      let qty = parseInt(quantityDisplay.textContent,10);
+      quantityDisplay.textContent = qty+1;
+    });
+  }
+
+  // Manejo form (simulación)
+  const orderForm = document.querySelector('.js-order-form');
+  if(orderForm){
+    orderForm.addEventListener('submit', e => {
+      e.preventDefault();
+      alert('¡Gracias! Tu orden ha sido registrada (simulación).');
+    });
+  }
+
+  // 3) FAQ Desplegables
+  const faqItems = document.querySelectorAll('.faq-item');
+  faqItems.forEach(item => {
+    const btn = item.querySelector('.faq-question');
+    if(btn){
+      btn.addEventListener('click', () => {
+        item.classList.toggle('active');
+      });
+    }
+  });
+});
+script>
+    // Inicializar iconos de Lucide
+    lucide.createIcons();
+
+  </script>
+
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+  // Gallery functionality
+  const mainImage = document.getElementById('mainImage');
+  const thumbnails = document.querySelectorAll('.thumbnail');
+
+  thumbnails.forEach(thumbnail => {
+    thumbnail.addEventListener('click', function() {
+      // Update main image
+      const newImageSrc = this.getAttribute('data-image');
+      mainImage.src = newImageSrc;
+      
+      // Remove active class from all thumbnails
+      thumbnails.forEach(thumb => thumb.classList.remove('active'));
+      
+      // Add active class to clicked thumbnail
+      this.classList.add('active');
+    });
+  });
+});
+</script>
+
+</body>
+</html>

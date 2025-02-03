@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Downsell page</title>
+  <link rel="stylesheet" href="./styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+  <!-- Librería html2canvas (CDN) -->
+  <script src="https://cdn.jsdelivr.net/npm/html2canvas@1.4.1/dist/html2canvas.min.js"></script>
+
+</head>
+
+<body>
+<div id="capture">
+  <!-- Checkout -->
+  <section id="checkout" class="checkout-section-2">
+    <h3 class="checkout-section__subtitle-2">🎉 GANASTE 🎉</h3>
+    <h3 class="checkout-section__title-2">¡Gran descuento </br>en la segunda unidad!</h3>
+     <!-- Countdown -->
+    <!-- <div class="countdown-section">
+        <div class="container">
+          <p class="countdown-title">¡Terminara pronto!</p>
+          <div class="countdown-timer">
+            <div class="countdown-item">
+              <span id="days">00</span>
+              <span class="countdown-label">Días</span>
+            </div>
+            <div class="countdown-item">
+              <span id="hours">00</span>
+              <span class="countdown-label">Horas</span>
+            </div>
+            <div class="countdown-item">
+              <span id="minutes">00</span>
+              <span class="countdown-label">Minutos</span>
+            </div>
+            <div class="countdown-item">
+              <span id="seconds">00</span>
+              <span class="countdown-label">Segundos</span>
+            </div>
+          </div>
+        </div>
+      </div> -->
+
+    </div>
+
+    <!-- 1) Bump Offer Ajustado -->
+    <div class="bump-offer-2">
+      <div class="bump-content">
+        <div class="product-header-2">
+           <!-- Imagen de producto con descuento -->
+          <img
+            src="https://images.unsplash.com/photo-1620916566398-39f1143ab7be?auto=format&fit=crop&q=80"
+            alt="Producto principal"
+            class="bump-image-3"
+          />
+          <h6>{Product_downsell}</h6>
+        </div>
+        <div class="bump-info-2">
+          <p>{Product_downsellt_description}</p>
+          <p class="price-old-2">{Product_downsell_price}</p>
+          <p class="price-current">{Product_downsell_sale}</p>
+
+          <!-- Texto + toggle debajo del precio -->
+          <div class="bump-bottom-row">
+            <h5 class="bump-add-title">Agregar a mi orden</h5>
+            <div class="bump-toggle js-bump-toggle"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="button-content">
+    <a href="Thanks.html" class="cta-button hero-cta">FINALIZAR COMPRA</a>
+    </div>
+  </section>
+</div>
+
+</div>
+
+<script>
+
+  // Toggle Bump Offer
+  const bumpToggle = document.querySelector('.js-bump-toggle');
+  if(bumpToggle){
+    bumpToggle.addEventListener('click', () => {
+      bumpToggle.classList.toggle('active');
+    });
+  }
+
+    // Countdown Timer
+    function updateCountdown() {
+      // Set the date we're counting down to (7 days from now)
+      const countDownDate = new Date();
+      countDownDate.setMinutes(countDownDate.getMinutes() + 15);
+    
+      function update() {
+        const now = new Date().getTime();
+        const distance = countDownDate.getTime() - now;
+    
+        const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+        const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+        const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+    
+        document.getElementById("days").textContent = days.toString().padStart(2, '0');
+        document.getElementById("hours").textContent = hours.toString().padStart(2, '0');
+        document.getElementById("minutes").textContent = minutes.toString().padStart(2, '0');
+        document.getElementById("seconds").textContent = seconds.toString().padStart(2, '0');
+    
+        if (distance < 0) {
+          clearInterval(x);
+          document.querySelector(".countdown-section").style.display = "none";
+        }
+      }
+    
+      update();
+      const x = setInterval(update, 1000);
+    }
+    
+    updateCountdown();
+    </script>
+    
+
+
+</body>
+</html>

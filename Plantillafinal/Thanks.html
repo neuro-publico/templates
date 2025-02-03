@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Thanks page</title>
+  <link rel="stylesheet" href="./styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+  <!-- Librería html2canvas (CDN) -->
+  <script src="https://cdn.jsdelivr.net/npm/html2canvas@1.4.1/dist/html2canvas.min.js"></script>
+
+</head>
+
+<body>
+    <div id="capture">
+      <!-- Checkout -->
+      <section id="checkout" class="checkout-section-2">
+        <!-- Lottie Animation -->
+        <div style="display: flex; justify-content: center; align-items: center;">
+          <script src="https://unpkg.com/@dotlottie/player-component@2.7.12/dist/dotlottie-player.mjs" type="module"></script>
+          <dotlottie-player 
+            src="https://lottie.host/c8e700e3-2680-4cc1-876e-ab8349b56a8e/zkedWOpKSj.lottie" 
+            background="transparent" 
+            speed="1" 
+            style="width: 170px; height: 170px" 
+            loop 
+            autoplay>
+          </dotlottie-player>
+        </div>
+    
+        <h3 class="checkout-section__title-2">¡Genial!</br>Finalizaste tu compra </br>con éxito</h3>
+
+        <!-- Resumen de la orden -->
+                <!-- Resumen de la orden -->
+                <div class="order-summary">
+                    <div class="order-details">
+                        <h3 class="checkout-section__subtitle-2">ORDEN COMPLETADA</h3>
+                        <p class="order-number">Número de orden: #<span id="orderNumber">12345</span></p>
+                        <p class="order-date">Fecha: <span id="orderDate"></span></p>
+                        
+                        <!-- Lista de productos -->
+                        <div class="order-products">
+                            <h4>Productos:</h4>
+                            <ul class="product-list">
+                                <li>
+                                    <span class="product-name">Crema Antiarrugas</span>
+                                    <span class="product-quantity">x1</span>
+                                    <span class="product-price">$49.99</span>
+                                </li>
+                                <!-- Si hay un bump offer seleccionado -->
+                                <li>
+                                    <span class="product-name">Kit de Masaje Facial</span>
+                                    <span class="product-quantity">x1</span>
+                                    <span class="product-price">$19.99</span>
+                                </li>
+                            </ul>
+                        </div>
+        
+                        <div class="order-total">
+                            <p>Total pagado: $69.98</p>
+                        </div>
+                    </div>
+                </div>
+        
+
+        <div class="button-content">
+        <div class="button-content">
+          <a href="index.html" class="cta-button hero-cta">VOLVER AL COMERCIO</a>
+        </div>
+      </section>
+    </div>
+
+</div>
+
+<script>
+    // Establecer la fecha actual
+    const today = new Date();
+    document.getElementById('orderDate').textContent = today.toLocaleDateString();
+</script>
+
+</body>
+</html>
