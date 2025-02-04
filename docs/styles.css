@@ -190,18 +190,6 @@ body {
   margin-left: 10px;
 }
 
-.payment-security-section-wide-2 {
-  width: 40% !important;
-  margin: 0 auto;
-  border-radius: 15px;
-}
-
-.payment-security-section-wide {
-  width: 40% !important;
-  margin: 0 auto;
-  border-radius: 15px;
-}
-
 .benefit-card__image img {
   max-height: 213px;
 }
@@ -664,7 +652,6 @@ width: 100%;
 /* 3) Sección Preguntas Frecuentes (FAQ) */
 .faq-section {
   padding: 2rem 0;
-  max-width: 900px;
   margin: 0 auto;
 }
 .faq-title-box {
@@ -959,7 +946,7 @@ width: 100%;
   display:flex;
   flex-direction:column;
   gap:0.75rem;
-  padding:0.5rem 1rem;
+  padding:0.5rem 1rem 1.5rem 1rem;
 }
 .bottom-bar__top {
   display:flex;
