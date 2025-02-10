@@ -1,0 +1,850 @@
+body {
+    margin: 0;
+    line-height: normal;
+}
+
+.fluxi-is-100 {
+    position: relative;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+}
+.fluxi-is-100-free-wrapper {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    background: linear-gradient(90deg, #5050ea, #85a2ff);
+    width: 100%;
+    height: 56px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+    padding: 0px 0px 16px;
+    box-sizing: border-box;
+    text-align: left;
+    color: #101010;
+}
+.frame-child {    
+    width: 100%;
+    position: relative;
+    height: auto;
+    object-fit: cover;
+}
+.payments-24dp-e8eaed-fill0-wgh-icon {
+    width: 32px;
+    position: relative;
+    height: 32px;
+    overflow: hidden;
+    flex-shrink: 0;
+}
+.works-with-any {
+    width: 136px;
+    position: relative;
+    line-height: 18px;
+    display: inline-block;
+    height: 85px;
+    flex-shrink: 0;
+    text-align: left;
+    font-size: 16px;
+}
+.payments-24dp-e8eaed-fill0-wgh-parent {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 7.5px;
+}
+.frame-group {
+    width: 80%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-content: center;
+    gap: 16px 25.5px;
+    z-index: 999;
+    padding-top: 1rem;
+}
+.group-parent {
+    position: relative;
+    top: -9rem;
+    left: 0px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+.group-child {
+    position: absolute;
+    top: 143px;
+    left: 5%;
+    width: 90%;
+    height: auto;
+    z-index: 99;
+}
+.frame-icon-2 {
+    width: 100%;
+    position: relative;
+    height: 60px;
+    overflow: hidden;
+    flex-shrink: 0;
+}
+.frame-icon {
+    width: 82px;
+    position: relative;
+    height: 33px;
+    overflow: hidden;
+    flex-shrink: 0;
+}
+.add-your-product {
+    width: 324px;
+    position: relative;
+    line-height: 36px;
+    font-weight: 800;
+    background: linear-gradient(180deg, #fff 55%, #8b8dff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    display: inline-block;
+    font-size: 35px;
+}
+.vector-icon {
+    width: 178px;
+    position: relative;
+    height: 30.1px;
+}
+.add-your-product-and-fluxi-cr-parent {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 7px;
+    text-align: center;
+}
+.ic-check-icon {
+    width: 16.8px;
+    position: relative;
+    height: 16.1px;
+}
+.our-ai-finds {
+    width: 232px;
+    position: relative;
+    display: inline-block;
+    flex-shrink: 0;
+    text-align: left;
+}
+.ic-check-parent {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 7px;
+    font-size: 16px;
+    width: 100%;
+}
+.frame-parent1 {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 9px;
+    font-size: 14px;
+    width: 100%;
+}
+.try-now {
+    position: relative;
+    line-height: 16px;
+    font-weight: 800;
+}
+.try-now-wrapper {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+.frame-wrapper {
+    width: 188px;
+    border-radius: 5px;
+    background-color: #fff;
+    height: 41.6px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+.limited-time-offer {
+    width: 188px;
+    position: relative;
+    font-size: 10px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    display: inline-block;
+    color: #fff;
+    text-align: center;
+}
+.frame-parent2 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 8px;
+    font-size: 17.14px;
+    color: #4545e8;
+}
+.frame-div {
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 16px;
+}
+.frame-container {
+    position: relative;
+    top: 100px;
+    left: 0px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 18px;
+    font-size: 30px;
+    width: 100%;
+    z-index: 999999;
+}
+.frame-parent {
+    position: relative;
+    top: 116px;
+    left: 0px;
+    width: 100%;
+    height: auto;
+    text-align: center;
+}
+.frame-item {
+    width: 100%;
+    position: relative;
+    height: 201px;
+}
+.img-item-fluxi-1 {
+    width: 100%;
+    position: relative;
+    height: 274px;
+    background-image: url(images/img-item-fluxi-1.png);
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.img-item-fluxi-2 {
+    width: 100%;
+    position: relative;
+    height: 221px;
+    background-image: url(images/img-item-fluxi-2.png);
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.fluxi-is-perfect {
+    color: #5050ea;
+}
+
+.want-your-products-container {
+    width: 228px;
+    position: relative;
+    line-height: 25px;
+    display: inline-block;
+}
+.want-your-products-to-sell-lik-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: -30px;
+}
+.group-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    width: 90%;
+}
+
+.group-container-2 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    width: 90%;
+}
+.frame-inner {
+    width: 135.8px;
+    position: relative;
+    height: 138.1px;
+}
+.group-wrapper {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+.group-parent1 {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 12.3px;
+    margin-top: -30px;
+}
+.for-entrepreneurs-chasing-container {
+    width: 241px;
+    position: relative;
+    line-height: 25px;
+    display: inline-block;
+}
+.for-entrepreneurs-chasing-rema-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: -30px;
+}
+.frame-parent3 {
+    position: relative;
+    top: -125px;
+    left: 0px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+    font-size: 21px;
+}
+.img-item-fluxi-3 {
+    width: 630px;
+    position: relative;
+    height: 306px;
+    object-fit: contain;
+    background-image: url(images/img-item-fluxi-3.png);
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.with-the-power {
+    color: #fff;
+}
+.we-turn-your-container {
+    width: 168px;
+    position: relative;
+    line-height: 25px;
+    display: inline-block;
+}
+.we-turn-your-wishes-into-sales-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    margin-top: -308px;
+}
+.group-parent2 {
+    position: relative;
+    top: 25px;
+    left: 13px;
+    width: 100%;
+    height: 332px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: flex-start;
+    padding: 0px 2px 0px 0px;
+    box-sizing: border-box;
+    text-align: left;
+    font-size: 21px;
+    color: #5050ea;
+}
+.fluxi-is-1001 {
+    width: 212px;
+    position: relative;
+    line-height: 44px;
+    font-weight: 800;
+    display: inline-block;
+}
+.frame-child3 {
+    width: 187.2px;
+    position: relative;
+    height: 104.7px;
+    object-fit: contain;
+}
+.group-parent3 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0px;
+    opacity: inherit;
+    flex-direction: row;
+    width: 100%;
+    flex-wrap: wrap;
+}
+.frame-wrapper1 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    text-align: left;
+    font-size: 17.14px;
+    color: #101010;
+}
+.fluxi-is-100-free-parent {
+    position: relative;
+    top: -61px;
+    left: 0px;
+    background: linear-gradient(180deg, #5050ea, #121212 85%);
+    width: 100%;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 80px 0px;
+    box-sizing: border-box;
+    gap: 18.9px;
+    font-size: 37px;
+}
+.faqs {
+    width: 241px;
+    position: relative;
+    line-height: 25.44px;
+    display: inline-block;
+}
+.how-does-fluxi {
+    position: relative;
+}
+.keyboard-arrow-down-24dp-e8eae-icon {
+    width: 24px;
+    position: relative;
+    height: 24px;
+    overflow: hidden;
+    flex-shrink: 0;
+}
+.how-does-fluxi-work-parent {
+    align-self: stretch;
+    border-bottom: 0.5px solid #fff;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 8px;
+}
+.do-i-need-any-experience-to-us-parent {
+    border-bottom: 0.5px solid #fff;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 8px;
+    gap: 8px;
+}
+.how-long-does {
+    width: 214px;
+    position: relative;
+    display: inline-block;
+    height: 30px;
+    flex-shrink: 0;
+}
+.how-long-does-it-take-to-set-u-parent {
+    align-self: stretch;
+    border-bottom: 0.5px solid #fff;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 11px 8px;
+}
+.does-fluxi-keep {
+    width: 214px;
+    position: relative;
+    display: inline-block;
+    flex-shrink: 0;
+}
+.does-fluxi-keep-optimizing-my-parent {
+    align-self: stretch;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 8px;
+}
+.frame-parent5 {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 8px;
+    text-align: left;
+    font-size: 12.14px;
+    width: 80%;
+}
+.faqs-parent {
+    position: relative;
+    top: 24px;
+    left: 0px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+    font-size: 20.35px;
+}
+.its-like-having {
+    width: 274px;
+    position: relative;
+    line-height: 34px;
+    display: inline-block;
+    color: #fff;
+}
+.try-fluxi-for-free-wrapper {
+    width: 188px;
+    border-radius: 5px;
+    background-color: #ffffff;
+    height: 41.6px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    color: #000000;
+}
+.frame-wrapper2 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    text-align: left;
+    font-size: 17.14px;
+    color: #fff;
+}
+.its-like-having-an-expert-sal-parent {
+    position: relative;
+    top: -103px;
+    left: 0px;
+    background-image: url(images/background-cta-fluxi.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 498px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+    padding: 0px 0px 124px;
+    box-sizing: border-box;
+    gap: 18.9px;
+    font-size: 27px;
+    color: #101010;
+}
+.sales-like-magic {
+    width: 246px;
+    position: relative;
+    line-height: 35px;
+    display: inline-block;
+}
+.start-for-free-now-wrapper {
+    width: 188px;
+    box-shadow: 0px 0px 20px #6262fa;
+    border-radius: 5px;
+    background: linear-gradient(90deg, #5050ea, #85a2ff);
+    height: 41.6px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+.sales-like-magic-parent {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 16px;
+}
+.favorite-24dp-e8eaed-fill1-wgh-icon {
+    width: 27px;
+    position: relative;
+    height: 27px;
+    overflow: hidden;
+    flex-shrink: 0;
+}
+.favorite-24dp-e8eaed-fill1-wgh-parent {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 9px;
+}
+.all-rights-reserved {
+    margin: 0;
+}
+.copyright-2025-all-container {
+    align-self: stretch;
+    position: relative;
+    font-size: 14px;
+}
+.frame-parent7 {
+    align-self: stretch;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 19px;
+    font-size: 17.03px;
+}
+.frame-parent6 {
+    position: relative;
+    top: -63px;
+    left: 0px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 38.9px;
+    font-size: 27px;
+    height: 240px;
+}
+.frame-icon1 {
+    position: absolute;
+    top: 3263px;
+    left: 84.21px;
+    width: 151.6px;
+    height: 61px;
+    overflow: hidden;
+}
+.landing-mobile-v2 {
+    width: 100%;
+    position: relative;
+    background-color: #101010;
+    height: auto;
+    overflow: hidden;
+    text-align: center;
+    font-size: 12px;
+    color: #fff;
+    font-family: 'Plus Jakarta Sans';
+}
+.faqs-section {
+  padding: 2rem;
+  top: -100px !important;
+  position: relative;
+}
+
+.faqs-title {
+  text-align: center;
+  margin-bottom: 1rem;
+  font-size: 1rem;
+}
+
+.faq-item {
+  border-bottom: 1px solid #e8eaed;
+  margin-bottom: 0rem;
+}
+
+.faq-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    cursor: pointer;
+    font-size: 1rem;
+    text-align: left
+}
+
+.faq-content {
+  padding: 0 1rem 1rem;
+  display: none;
+}
+
+.faq-item.active .faq-content {
+    display: block;
+    text-align: left;
+    line-height: 19px;
+    font-size: 14px;
+}
+
+.faq-item.active .arrow-icon {
+  transform: rotate(180deg);
+}
+
+.arrow-icon {
+  transition: transform 0.3s ease;
+}
+.fluxi-is-100-free-parent b {
+    font-size: 22px;
+    font-weight: 300;
+}
+@media (min-width: 1024px) {
+
+    .add-your-product {
+        font-size: 50px;
+        width: 60%;
+        line-height: 51px;
+    }
+
+    .frame-icon {
+        width: 60%;
+        height: 53px;
+    }
+
+    .frame-parent1 {
+        flex-direction: row;
+        font-size: 14px;
+        width: 48%;
+    }
+
+    .group-parent {
+        top: -26rem;
+    }
+
+    .group-child {
+        top: 395px;
+    }
+
+    .fluxi-is-100-free-wrapper {
+        height: 43px;
+        padding: 0px 0px 14px;
+    }
+
+    .frame-container {
+        gap: 38px;
+    }
+
+    .vector-icon {
+        width: 298px;
+        height: 60.1px;
+    }
+    
+    .limited-time-offer {
+        width: 280px;
+    }
+
+    .works-with-any {
+        width: 176px;
+    }
+
+    .frame-group {
+        gap: 16px 65.5px;
+        margin-top: -5rem;
+    }
+
+    .group-container {
+        flex-direction: row;
+        width: 90%;
+        gap: 0px;
+        margin-left: -124px;
+    }
+
+    .img-item-fluxi-1 {
+        height: 701px;
+    }
+
+    .img-item-fluxi-2 {
+        height: 651px;
+    }
+
+    .img-item-fluxi-3 {
+        height: 501px;
+    }
+
+    .frame-parent3 {
+        top: -420px;
+        font-size: 50px;
+        text-align: left;
+        height: auto;
+    }
+
+    .want-your-products-container {
+        line-height: 50px;
+        width: 370px;
+        background: linear-gradient(180deg, #fff 55%, #4c4ec1);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+
+    .for-entrepreneurs-chasing-container {
+        width: 450px;
+        line-height: 50px;
+        background: linear-gradient(180deg, #fff 55%, #4c4ec1);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+    
+    .group-container-2 {
+        flex-direction: row-reverse;
+        width: 100%;
+        margin-left: 310px;
+    }
+
+    .group-parent2 {
+        top: -130px;
+        height: 800px;
+        margin-left: -530px;
+    }
+
+    .img-item-fluxi-3 {
+        height: 740px;
+        width: 100%;
+    }
+
+    .we-turn-your-container {
+        top: -245px;
+        font-size: 50px;
+        text-align: left;
+        line-height: 51px;
+        width: 340px;
+        background: linear-gradient(180deg, #fff 55%, #4c4ec1);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        left: 6rem;
+    }
+
+    .fluxi-is-100-free-parent {
+        top: -291px;
+    }
+
+    .fluxi-is-1001 {
+        text-align: center;
+    }
+
+    .faqs-section {
+        top: -338px !important;
+        text-align: center;
+        width: 80%;
+    }
+    .frame-child3 {
+        width: 300px;
+        height: auto;
+    }
+    .its-like-having-an-expert-sal-parent {
+        top: -293px;
+    }
+    .its-like-having {
+        width: 474px;
+        line-height: 51px;
+        text-align: center;
+        font-size: 50px;
+    }
+    .frame-parent6 {
+        top: -12px;
+        height: 0px;
+        text-align: center;
+    }
+
+    .frame-icon-2 {
+        width: 100%;
+        position: relative;
+        height: 80px;
+        overflow: hidden;
+        flex-shrink: 0;
+    }
+    
+  }
