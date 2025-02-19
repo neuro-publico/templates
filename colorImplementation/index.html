@@ -1,0 +1,671 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sales website</title>
+    <link rel="stylesheet" href="./styles.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+    <div id="capture">
+      <!-- Banner -->
+      <div class="promo-banner primary-background">
+        <span class="promo-banner__text">⏰ LAST UNITS LEFT!</span>
+        <button class="promo-banner__close" aria-label="Cerrar banner">
+          ×
+        </button>
+      </div>
+
+      <header class="header secondary-background">
+        <div class="container">
+          <h1 class="logo primary-text">LOGO</h1>
+        </div>
+      </header>
+
+      <main class="main-content">
+        <!-- <div class="container-hero"> -->
+        <!-- HERO: Carrusel 4:3 -->
+        <!-- <section class="hero-section"> -->
+        <!-- Hero con galería -->
+        <div class="background-hero">
+          <div style="padding: 0 1rem" class="container hero-section">
+            <div class="product-grid">
+              <!-- Galería de imágenes -->
+              <div class="gallery">
+                <div class="main-image">
+                  <!-- Estas imagenes son de solo producto -->
+                  <img id="mainImage" src="${data?.images[0] || ""}"
+                  alt="Producto principal" />
+                </div>
+                <div class="thumbnails">
+                  <button
+                    class="thumbnail active"
+                    data-image="https://images.unsplash.com/photo-1620916566398-39f1143ab7be?auto=format&fit=crop&q=80"
+                  >
+                    <img src="${data?.images[0] || ""}" alt="Miniatura 1" />
+                  </button>
+                  <button
+                    class="thumbnail"
+                    data-image="https://images.unsplash.com/photo-1535585209827-a15fcdbc4c2d?auto=format&fit=crop&q=80"
+                  >
+                    <img src="${data?.images[1] || ""}" alt="Miniatura 2" />
+                  </button>
+                  <button
+                    class="thumbnail"
+                    data-image="https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?auto=format&fit=crop&q=80"
+                  >
+                    <img src="${data?.images[2] || ""}" alt="Miniatura 3" />
+                  </button>
+                  <button
+                    class="thumbnail"
+                    data-image="https://images.unsplash.com/photo-1527799820374-dcf8d9d4a388?auto=format&fit=crop&q=80"
+                  >
+                    <img src="${data?.images[3] || ""}" alt="Miniatura 4" />
+                  </button>
+                </div>
+              </div>
+            </div>
+            <!-- Los campos de esta sección se llamaran del onboarding -->
+            <div class="product-info">
+              <h2 class="product-title white-text">${data.name || ""}</h2>
+              <div class="rating-container">
+                <div class="stars white-text">★★★★★</div>
+                <span class="reviews-text primary-text">4.7</span>
+              </div>
+              <div class="price-container">
+                <p class="price-old primary-text">${data.price * 1.5 || ""} USD</p>
+                <p class="price-current white-text">${data.price || ""} USD</p>
+                <p class="price-tag secondary-text white-background>
+                  payment on delivery
+                </p>
+              </div>
+              <a
+                href="#checkout"
+                class="cta-button hero-cta secondary-background"
+                >BUY NOW</a
+              >
+
+              <section class="content-section content-section--tight">
+                <p class="content-section__text primary-text">
+                  ${ data.product_description || "" }
+                </p>
+              </section>
+
+              <section
+                class="content-section content-section--tight ingredients-section"
+              >
+                <h3 class="content-section__title primary-text">FEATURES</h3>
+                <!-- <br>
+                  </br> -->
+                <ul class="ingredients-list">
+                  <li>
+                    <span class="check-icon secondary-background">✓</span>
+                    <!-- ◊˝˝ -->
+                    <span
+                      >${data.copies?.Features?.Features_list[0] || ""}</span
+                    >
+                  </li>
+                  <li>
+                    <span class="check-icon secondary-background">✓</span>
+                    <span
+                      >${data.copies?.Features?.Features_list[1] || ""}</span
+                    >
+                  </li>
+                  <li>
+                    <span class="check-icon secondary-background">✓</span>
+                    <span
+                      >${data.copies?.Features?.Features_list[2] || ""}</span
+                    >
+                  </li>
+                  <li>
+                    <span class="check-icon secondary-background">✓</span>
+                    <span
+                      >${data.copies?.Features?.Features_list[3] || ""}</span
+                    >
+                  </li>
+                  <li>
+                    <span class="check-icon secondary-background">✓</span>
+                    <span
+                      >${data.copies?.Features?.Features_list[4] || ""}</span
+                    >
+                  </li>
+                  <li>
+                    <span class="check-icon secondary-background">✓</span>
+                    <span
+                      >${data.copies?.Features?.Features_list[5] || ""}</span
+                    >
+                  </li>
+                </ul>
+              </section>
+            </div>
+            <!-- </section> -->
+          </div>
+        </div>
+        <!-- Los campos de esta sección se llamaran del onboarding -->
+        <section class="payment-security-section-wide-2 secondary-background">
+          <div class="payment-security-section__wrapper">
+            <div class="payment-security-icon">🔒</div>
+            <p class="payment-security-text">
+              You will have ${data.product_warranties || "0"} days of warranty,
+              shop with confidence
+            </p>
+          </div>
+        </section>
+
+        <div class="container">
+          <!-- BENEFICIOS -->
+          <section class="benefits-sectio">
+            <div class="benefits-grid">
+              <div class="benefit-card">
+                <h4 class="benefit-card__title primary-text">
+                  ${data.copies?.Benefits?.Benefits_list[0].Benefit_name || ""}
+                </h4>
+                <!-- Esta imagen es de un beneficio -->
+                <div class="benefit-card__image">
+                  <img src="${data?.images[4] || ""}" alt="Benefits_img" />
+                </div>
+                <p class="benefit-card__text">
+                  ${ data.copies?.Benefits?.Benefits_list[0]
+                  .Benefit_description || "" }
+                </p>
+              </div>
+
+              <div class="benefit-card">
+                <h4 class="benefit-card__title primary-text">
+                  ${data.copies?.Benefits?.Benefits_list[1].Benefit_name || ""}
+                </h4>
+                <!-- Esta imagen es de un beneficio -->
+                <div class="benefit-card__image">
+                  <img src="${data?.images[5] || ""}" alt="Benefits_img" />
+                </div>
+                <p class="benefit-card__text">
+                  ${ data.copies?.Benefits?.Benefits_list[1]
+                  .Benefit_description || "" }
+                </p>
+              </div>
+
+              <div class="benefit-card">
+                <h4 class="benefit-card__title primary-text">
+                  ${data.copies?.Benefits?.Benefits_list[2].Benefit_name || ""}
+                </h4>
+                <!-- Esta imagen es de un beneficio -->
+                <div class="benefit-card__image">
+                  <img src="${data?.images[6] || ""}" alt="Benefits_img" />
+                </div>
+                <p class="benefit-card__text">
+                  ${ data.copies?.Benefits?.Benefits_list[2]
+                  .Benefit_description || "" }
+                </p>
+              </div>
+
+              <div class="benefit-card">
+                <h4 class="benefit-card__title primary-text">
+                  ${data.copies?.Benefits?.Benefits_list[3].Benefit_name || ""}
+                </h4>
+                <!-- Esta imagen es de un beneficio -->
+                <div class="benefit-card__image">
+                  <img src="${data?.images[7] || ""}" alt="Benefits_img" />
+                </div>
+                <p class="benefit-card__text">
+                  ${ data.copies?.Benefits?.Benefits_list[3]
+                  .Benefit_description || "" }
+                </p>
+              </div>
+
+              <div class="benefit-card">
+                <h4 class="benefit-card__title primary-text">
+                  ${data.copies?.Benefits?.Benefits_list[4].Benefit_name || ""}
+                </h4>
+                <!-- Esta imagen es de un beneficio -->
+                <div class="benefit-card__image">
+                  <img src="${data?.images[8] || ""}" alt="Benefits_img" />
+                </div>
+                <p class="benefit-card__text">
+                  ${ data.copies?.Benefits?.Benefits_list[4]
+                  .Benefit_description || "" }
+                </p>
+              </div>
+
+              <div class="benefit-card">
+                <h4 class="benefit-card__title primary-text">
+                  ${data.copies?.Benefits?.Benefits_list[5].Benefit_name || ""}
+                </h4>
+                <!-- Esta imagen es de un beneficio -->
+                <div class="benefit-card__image">
+                  <img src="${data?.images[9] || ""}" alt="Benefits_img" />
+                </div>
+                <p class="benefit-card__text">
+                  ${ data.copies?.Benefits?.Benefits_list[5]
+                  .Benefit_description || "" }
+                </p>
+              </div>
+            </div>
+          </section>
+
+          <!-- Dolor... -->
+          <div class="container-pain-points">
+            <section class="pain-points-section secondary-background-20">
+              <div class="pain-point-content">
+                <div class="pain-point-text">
+                  <h3 class="pain-point-text__title secondary-text">
+                    ${data.copies?.Pain_points?.Pain_points_title || ""}
+                  </h3>
+                </div>
+                <div class="pain-point-image">
+                  <!-- Esta imagen es de un punto de dolor del usuario final -->
+                  <img src="${data?.images[4] || ""}" alt="Cabello dañado" />
+                </div>
+                <div class="pain-point-text">
+                  <p>
+                    ${data.copies?.Pain_points?.Pain_points_description || ""}
+                  </p>
+                </div>
+              </div>
+            </section>
+
+            <!-- Casos de uso -->
+            <section>
+              <div class="benefit-card">
+                <div class="use-case-image">
+                  <!-- Esta imagen representa un caso de uso del producto/servicio -->
+                  <img src="${data?.images[0] || ""}" alt="Caso de uso" />
+                </div>
+                <div class="use-case-text">
+                  <h3 class="use-case-text__title secondary-text">
+                    ${data.copies?.Use_case?.Use_case_title || ""}
+                  </h3>
+                  <div class="use-case-check">
+                    <span class="check-icon secondary-background">✓</span>
+                    <p>${data.copies?.Use_case?.Use_case_item || ""}</p>
+                  </div>
+                </div>
+              </div>
+            </section>
+          </div>
+        </div>
+
+        <!-- Los campos de esta sección se llamaran del onboarding -->
+        <section class="payment-security-section-wide secondary-background">
+          <div class="payment-security-section__wrapper">
+            <div class="payment-security-icon">📦</div>
+            <p class="payment-security-text">Free shipping, easy and secure</p>
+          </div>
+        </section>
+
+        <div class="container">
+          <!-- Testimonios -->
+          <section class="content-section reviews-section">
+            <div class="reviews-title-box">
+              <h3 class="content-section__title primary-text">
+                ${data.copies?.Testimonials?.Testimonials_title || ""}
+              </h3>
+            </div>
+            <div class="review-grid">
+              <!-- 6 testimonios de ejemplo -->
+              <div class="review-card">
+                <div class="review-image">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 24 24"
+                    fill="currentColor"
+                    class="review-icon"
+                  >
+                    <path
+                      d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 3c1.66 0 3 1.34 3 3s-1.34 3-3 3-3-1.34-3-3 1.34-3 3-3zm0 14.2c-2.5 0-4.71-1.28-6-3.22.03-1.99 4-3.08 6-3.08 1.99 0 5.97 1.09 6 3.08-1.29 1.94-3.5 3.22-6 3.22z"
+                    />
+                  </svg>
+                </div>
+                <div class="review-header">
+                  <h4 class="review-name secondary-text">
+                    ${ data.copies?.Testimonials?.Testimonials_list[0]
+                    .Testimonials_name || "" }
+                  </h4>
+                </div>
+                <p class="review-text">
+                  ${ data.copies?.Testimonials?.Testimonials_list[0]
+                  .Testimonials_description || "" }
+                </p>
+                <div class="review-footer">
+                  <div class="review-verified">
+                    <span>✓</span>
+                    <span>Verified purchase</span>
+                  </div>
+                  <div class="review-stars">★★★★★</div>
+                </div>
+              </div>
+
+              <div class="review-card">
+                <div class="review-image">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 24 24"
+                    fill="currentColor"
+                    class="review-icon"
+                  >
+                    <path
+                      d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 3c1.66 0 3 1.34 3 3s-1.34 3-3 3-3-1.34-3-3 1.34-3 3-3zm0 14.2c-2.5 0-4.71-1.28-6-3.22.03-1.99 4-3.08 6-3.08 1.99 0 5.97 1.09 6 3.08-1.29 1.94-3.5 3.22-6 3.22z"
+                    />
+                  </svg>
+                </div>
+                <div class="review-header">
+                  <h4 class="review-name secondary-text">
+                    ${ data.copies?.Testimonials?.Testimonials_list[1]
+                    .Testimonials_name || "" }
+                  </h4>
+                </div>
+                <p class="review-text">
+                  ${ data.copies?.Testimonials?.Testimonials_list[1]
+                  .Testimonials_description || "" }
+                </p>
+                <div class="review-footer">
+                  <div class="review-verified">
+                    <span>✓</span>
+                    <span>Verified purchase</span>
+                  </div>
+                  <div class="review-stars">★★★★★</div>
+                </div>
+              </div>
+
+              <div class="review-card">
+                <div class="review-image">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 24 24"
+                    fill="currentColor"
+                    class="review-icon"
+                  >
+                    <path
+                      d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 3c1.66 0 3 1.34 3 3s-1.34 3-3 3-3-1.34-3-3 1.34-3 3-3zm0 14.2c-2.5 0-4.71-1.28-6-3.22.03-1.99 4-3.08 6-3.08 1.99 0 5.97 1.09 6 3.08-1.29 1.94-3.5 3.22-6 3.22z"
+                    />
+                  </svg>
+                </div>
+                <div class="review-header">
+                  <h4 class="review-name secondary-text">
+                    ${ data.copies?.Testimonials?.Testimonials_list[2]
+                    .Testimonials_name || "" }
+                  </h4>
+                </div>
+                <p class="review-text">
+                  ${ data.copies?.Testimonials?.Testimonials_list[2]
+                  .Testimonials_description || "" }
+                </p>
+                <div class="review-footer">
+                  <div class="review-verified">
+                    <span>✓</span>
+                    <span>Verified purchase</span>
+                  </div>
+                  <div class="review-stars">★★★★★</div>
+                </div>
+              </div>
+
+              <div class="review-card">
+                <div class="review-image">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 24 24"
+                    fill="currentColor"
+                    class="review-icon"
+                  >
+                    <path
+                      d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 3c1.66 0 3 1.34 3 3s-1.34 3-3 3-3-1.34-3-3 1.34-3 3-3zm0 14.2c-2.5 0-4.71-1.28-6-3.22.03-1.99 4-3.08 6-3.08 1.99 0 5.97 1.09 6 3.08-1.29 1.94-3.5 3.22-6 3.22z"
+                    />
+                  </svg>
+                </div>
+                <div class="review-header">
+                  <h4 class="review-name secondary-text">
+                    ${ data.copies?.Testimonials?.Testimonials_list[3]
+                    .Testimonials_name || "" }
+                  </h4>
+                </div>
+                <p class="review-text">
+                  ${ data.copies?.Testimonials?.Testimonials_list[3]
+                  .Testimonials_description || "" }
+                </p>
+                <div class="review-footer">
+                  <div class="review-verified">
+                    <span>✓</span>
+                    <span>Verified purchase</span>
+                  </div>
+                  <div class="review-stars">★★★★☆</div>
+                </div>
+              </div>
+
+              <div class="review-card">
+                <div class="review-image">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 24 24"
+                    fill="currentColor"
+                    class="review-icon"
+                  >
+                    <path
+                      d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 3c1.66 0 3 1.34 3 3s-1.34 3-3 3-3-1.34-3-3 1.34-3 3-3zm0 14.2c-2.5 0-4.71-1.28-6-3.22.03-1.99 4-3.08 6-3.08 1.99 0 5.97 1.09 6 3.08-1.29 1.94-3.5 3.22-6 3.22z"
+                    />
+                  </svg>
+                </div>
+                <div class="review-header">
+                  <h4 class="review-name secondary-text">
+                    ${ data.copies?.Testimonials?.Testimonials_list[4]
+                    .Testimonials_name || "" }
+                  </h4>
+                </div>
+                <p class="review-text">
+                  ${ data.copies?.Testimonials?.Testimonials_list[4]
+                  .Testimonials_description || "" }
+                </p>
+                <div class="review-footer">
+                  <div class="review-verified">
+                    <span>✓</span>
+                    <span>Verified purchase</span>
+                  </div>
+                  <div class="review-stars">★★★★☆</div>
+                </div>
+              </div>
+
+              <div class="review-card">
+                <div class="review-image">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 24 24"
+                    fill="currentColor"
+                    class="review-icon"
+                  >
+                    <path
+                      d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 3c1.66 0 3 1.34 3 3s-1.34 3-3 3-3-1.34-3-3 1.34-3 3-3zm0 14.2c-2.5 0-4.71-1.28-6-3.22.03-1.99 4-3.08 6-3.08 1.99 0 5.97 1.09 6 3.08-1.29 1.94-3.5 3.22-6 3.22z"
+                    />
+                  </svg>
+                </div>
+                <div class="review-header">
+                  <h4 class="review-name secondary-text">
+                    ${ data.copies?.Testimonials?.Testimonials_list[4]
+                    .Testimonials_name || "" }
+                  </h4>
+                </div>
+                <p class="review-text">
+                  ${ data.copies?.Testimonials?.Testimonials_list[4]
+                  .Testimonials_description || "" }
+                </p>
+                <div class="review-footer">
+                  <div class="review-verified">
+                    <span>✓</span>
+                    <span>Verified purchase</span>
+                  </div>
+                  <div class="review-stars">★★★★★</div>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <!-- Sección de Preguntas Frecuentes (FAQ) -->
+          <section class="faq-section">
+            <div class="faq-title-box">
+              <h3 class="primary-text">Frequently Asked Questions</h3>
+            </div>
+
+            <div class="faq-item">
+              <button class="faq-question">
+                ${data.copies?.FAQs?.[0].question || ""}
+                <span class="faq-toggle secondary-text">+</span>
+              </button>
+              <div class="faq-answer">
+                <p>${data.copies?.FAQs?.[0].answer || ""}</p>
+              </div>
+            </div>
+
+            <div class="faq-item">
+              <button class="faq-question">
+                ${data.copies?.FAQs?.[1].question || ""}
+                <span class="faq-toggle secondary-text">+</span>
+              </button>
+              <div class="faq-answer">
+                <p>${data.copies?.FAQs?.[1].answer || ""}</p>
+              </div>
+            </div>
+
+            <div class="faq-item">
+              <button class="faq-question">
+                ${data.copies?.FAQs?.[2].question || ""}
+                <span class="faq-toggle secondary-text">+</span>
+              </button>
+              <div class="faq-answer">
+                <p>${data.copies?.FAQs?.[2].answer || ""}</p>
+              </div>
+            </div>
+          </section>
+
+          <!-- Checkout -->
+          <section id="checkout" class="checkout-section">
+            <h3 class="checkout-section__title secondary-text">Checkout</h3>
+            <div class="product-summary">
+              <h4 class="summary-title">Summary of your purchase:</h4>
+              <div class="product-summary__content">
+                <!-- Esta imagene es del producto -->
+                <img src="${data?.images[1] || ""}" alt="Shampoo de Argán"
+                class="product-summary__image" />
+                <!-- Los campos de esta sección se llamaran del onboarding -->
+                <div class="product-summary__info">
+                  <h5 class="secondary-text">${data.name}</h5>
+                  <ul class="product-summary__list">
+                    <!-- <li>{Gift_title}</li> -->
+                    <li class="warranties-list">${data.product_warranties || 0} days of warranty</li>
+                    <li>Free shipping nationwide</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            <div class="quantity-selector">
+              <span class="quantity-label">Quantity:</span>
+              <div class="quantity-controls">
+                <button
+                  class="quantity-button js-quantity-minus secondary-background"
+                >
+                  -
+                </button>
+                <span
+                  id="span-amount"
+                  class="quantity-display js-quantity-value"
+                  >1</span
+                >
+                <button
+                  class="quantity-button js-quantity-plus secondary-background"
+                >
+                  +
+                </button>
+              </div>
+            </div>
+
+            <form id="order-form" class="order-form js-order-form">
+              <div class="form-group">
+                <label for="nombre" class="form-label">Full Name</label>
+                <input
+                  name="nombre"
+                  type="text"
+                  id="nombre"
+                  class="form-input"
+                  placeholder="Your name"
+                />
+              </div>
+              <div class="form-group">
+                <label for="email" class="form-label">Email Address</label>
+                <input
+                  name="email"
+                  type="email"
+                  id="email"
+                  class="form-input"
+                  placeholder="your@email.com"
+                />
+              </div>
+              <div class="form-group">
+                <label for="telefono" class="form-label">Phone</label>
+                <input
+                  name="telefono"
+                  type="tel"
+                  id="telefono"
+                  class="form-input"
+                  placeholder="Your phone"
+                />
+              </div>
+              <div class="form-group">
+                <label for="direccion" class="form-label"
+                  >Shipping Address</label
+                >
+                <input
+                  name="direccion"
+                  type="text"
+                  id="direccion"
+                  class="form-input"
+                  placeholder="Your address"
+                />
+              </div>
+              <div id="card-element"><!-- A Stripe Element will be inserted here. --></div>
+              <div id="card-errors" role="alert"></div>
+            </form>
+          </section>
+          <!-- </div> -->
+        </div>
+        <!-- </section> -->
+        <!-- </div> -->
+      </main>
+
+      <!-- Barra fija inferior -->
+      <!-- Los campos de esta sección se llamaran del onboarding -->
+      <div class="bottom-bar js-bottom-bar">
+        <div class="bottom-bar__content container">
+          <div class="bottom-bar__top">
+            <div class="bottom-bar__price">
+              <p class="price-old-fixed">${data.price * 1.5 || ""} USD</p>
+              <p class="price-current-fixed">${data.price || ""} USD</p>
+            </div>
+            <div class="shipping-info">
+              <div class="info-tag">
+                ${ data.is_free_shipping ? "Free shipping" : "" }
+              </div>
+            </div>
+          </div>
+          <div class="bottom-bar__bottom">
+            <button
+              type="submit"
+              form="order-form"
+              class="cta-button bottom-bar__cta"
+            >
+              BUY NOW
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+  <script src="./script.js"></script>
+</html>

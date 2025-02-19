@@ -1,3 +1,9 @@
+:root {
+  --color-primary: red;
+  --color-secondary: blue;
+
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -794,7 +800,7 @@ width: 100%;
   background: #fff;
   border-radius: 0.75rem;
   padding: 2.5rem 1rem 1rem 1rem;
-  border: 1.8px solid #eb947f;
+  border: 1.8px solid var(--color-primary);
   margin: 2rem 0;
 }
 
@@ -836,8 +842,8 @@ width: 100%;
 }
 .bump-price {
   font-weight:700;
-  color:#eb947f;
-  margin-top:0.5rem;
+  color: var(--color-primary);
+  margin-top: 0.5rem;
   font-size: 1.3rem;
 }
 /* AJUSTE: Texto "Agregar a mi orden" + toggle a la derecha, debajo del precio */
@@ -1115,7 +1121,7 @@ width: 100%;
   font-size: 21px;
   line-height: 22px;
   margin-bottom: 6px;
-  color: #ea8f79;
+  color: var(--color-primary);
   width: 100%;
 }
 
@@ -1481,15 +1487,15 @@ select.form-input option {
 .bump-tag {
   position: absolute;
   top: -16px;
-  right: 101px;
-  background: #ffefeb;
-  color: #e8846c;
+  right: 40%;
+  background: #fefefe;
+  color: var(--color-primary);
   padding: 6px 15px;
   border-radius: 34px;
   font-size: 15px;
   font-weight: 500;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-  border: 1.8px solid #e8846c;
+  border: 1.8px solid var(--color-primary);
 }
 
 .bump-offer {

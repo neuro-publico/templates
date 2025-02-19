@@ -153,6 +153,7 @@ body {
     width: 100%;
 }
 .try-now {
+    display: block; 
     position: relative;
     line-height: 16px;
     font-weight: 800;
@@ -231,7 +232,7 @@ body {
     width: 100%;
     position: relative;
     height: 274px;
-    background-image: url(images/img-item-fluxi-1.png);
+    background-image: url(images/img-item-fluxi-1.webp);
     background-size: contain;
     background-position: center;
     background-repeat: no-repeat;
@@ -240,7 +241,7 @@ body {
     width: 100%;
     position: relative;
     height: 221px;
-    background-image: url(images/img-item-fluxi-2.png);
+    background-image: url(images/img-item-fluxi-2.webp);
     background-size: contain;
     background-position: center;
     background-repeat: no-repeat;
@@ -325,7 +326,7 @@ body {
     position: relative;
     height: 306px;
     object-fit: contain;
-    background-image: url(images/img-item-fluxi-3.png);
+    background-image: url(images/img-item-fluxi-3.webp);
     background-size: contain;
     background-position: center;
     background-repeat: no-repeat;
@@ -527,7 +528,7 @@ body {
     position: relative;
     top: -103px;
     left: 0px;
-    background-image: url(images/background-cta-fluxi.jpg);
+    background-image: url(images/background-cta-fluxi.webp);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
